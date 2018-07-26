@@ -1,0 +1,9 @@
+version: "3"
+services:
+  service:
+    image: node:10.7.0-jessie
+    working_dir: /app
+    command: sh -c "rm -rf node_modules && yarn install && node service.js"
+    volumes: 
+      - ./:/app
+    network_mode: host
